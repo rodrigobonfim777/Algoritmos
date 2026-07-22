@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// ESTRURA DA PILHA
 typedef struct pilha{
     int info;
     struct  pilha *prox;
@@ -17,6 +18,6 @@ PPilha push(PPilha pilha, int x){
 
     // AGORA O TOPO É O NOVO NÓ
     pilha = novo;
-    
+
     return pilha;
 }
