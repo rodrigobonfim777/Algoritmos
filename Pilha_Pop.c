@@ -8,17 +8,20 @@ typedef struct pilha{
 } TPilha;
 typedef TPilha *PPilha;
 
-PPilha Pop(PPilha pilha){
+int Pop(PPilha pilha){
     PPilha temp;
+    int valor;
 
     if(pilha == NULL){
-        printf("pilha vazia");
-        return NULL;
+        printf("Pilha vazia\n");
+        return -1;
     }
 
+    valor = pilha->info;
+
     temp = pilha;
-    pilha = pilha -> prox;
+    pilha = pilha->prox;
     free(temp);
 
-    return pilha;
+    return valor;
 }
